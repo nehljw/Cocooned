@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cocooned — Wrapped in Care, Ready to Flutter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #319795;
+      --secondary: #F6AD55;
+      --accent: #D53F8C;
+      --background: #FFFAEB;
+      --text: #2D3748;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--background); color: var(--text); line-height: 1.6; }
+    header {
+      background: #FFFAEB;
+      color: var(--text);
+      padding: 3rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .logo { max-width: 200 px; margin-bottom: 1rem; }
+    }
+    header h1 { font-size: 2.5rem; font-weight: 600; margin-bottom: 0.5rem; }
+    header p { font-size: 1.1rem; opacity: 0.9; }
+    nav { background: #b4dcdb; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    nav ul { display: flex; justify-content: center; list-style: none; }
+    nav li { margin: 0 1.5rem; }
+    nav a { display: block; padding: 1rem; font-weight: 600; text-decoration: none; color: var(--text); text-transform: uppercase; font-size: 0.9rem; transition: color 0.3s; }
+    nav a:hover { color: var(--primary); }
+
+    sleek-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  position: relative;
+  z-index: 10;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.logo {
+  max-width: 60px;
+  margin-bottom: 0;
+}
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.03em;
+}
+.brand-tagline {
+  font-size: 1rem;
+  color: var(--text);
+  opacity: 0.7;
+  margin-left: 1rem;
+  font-weight: 500;
+  display: none;
+}
+.sleek-header nav ul {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sleek-header nav li {
+  margin: 0;
+}
+.sleek-header nav a {
+  display: block;
+  padding: 0.5rem 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text);
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+.sleek-header nav a:hover {
+  background: var(--primary);
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .sleek-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  .header-left {
+    margin-bottom: 0.5rem;
+  }
+  .sleek-header nav ul {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .brand-tagline {
+    display: none;
+  }
+}
+@media (min-width: 1000px) {
+  .brand-tagline {
+    display: inline-block;
+  }
+}
+
+    /* Hero */
+    .hero { position: relative; height: 60vh; background: url('family-playing-toys.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
+    .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); }
+    .hero-content { position: relative; z-index: 1; max-width: 700px; padding: 0 1rem; }
+    .hero-content h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero-content p { font-size: 1.1rem; margin-bottom: 1.5rem; }
+    .btn { display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background: var(--primary); color: #fff; text-decoration: none; border-radius: 4px; font-weight: 600; transition: background 0.3s; }
+    .btn:hover { background: var(--text); }
+
+    section { padding: 4rem 1rem; max-width: 1100px; margin: 0 auto; }
+    section h2 { font-size: 2rem; margin-bottom: 1rem; position: relative; display: inline-block; }
+    section h2::after { content: ''; display: block; width: 50px; height: 4px; background: var(--secondary); margin-top: 0.5rem; border-radius: 2px; }
+
+    /* Event placeholders */
+    .events { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .event-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.05); text-align: center; }
+    .event-card img { width: 100%; height: auto; }
+    .event-card .card-content { padding: 1.5rem; }
+    .event-card h3 { margin-bottom: 0.5rem; color: var(--primary); }
+    .event-card p { margin-bottom: 1rem; }
+
+    /* Gallery */
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+    .gallery img { width: 100%; height: auto; border-radius: 8px; }
+
+    /* Features */
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    .feature-card { background: #fff; border-radius: 8px; padding: 2rem; box-shadow: 0 4px 8px rgba(0,0,0,0.05); transition: transform 0.3s; }
+    .feature-card:hover { transform: translateY(-5px); }
+    .feature-card h3 { margin-bottom: 0.75rem; color: var(--primary); }
+    .feature-card p { margin-bottom: 1rem; }
+
+    /* Subscription */
+    .subscription { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    .sub-card { background: #fff; border-radius: 8px; padding: 2rem; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
+    .sub-card h3 { color: var(--primary); margin-bottom: 1rem; }
+    .sub-card ul { list-style: none; padding-left: 0; }
+    .sub-card li::before { content: '•'; color: var(--secondary); display: inline-block; width: 1em; margin-left: -1em; }
+
+    /* Toolkits */
+    .toolkit-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5rem; }
+    .toolkit-card { background: var(--secondary); color: #fff; padding: 2rem 1.5rem; border-radius: 8px; text-align: center; transition: background 0.3s; }
+    .toolkit-card:nth-child(even) { background: var(--accent); }
+    .toolkit-card .icon { width: 64px; height: 64px; margin: 0 auto 1rem; }
+    .toolkit-card h3 { margin-bottom: 0.75rem; font-size: 1.1rem; }
+    .toolkit-card ul { list-style: none; padding: 0; margin: 0; }
+    .toolkit-card li { margin: 0.5rem 0; }
+    .toolkit-card li::before { content: '•'; margin-right: 0.5rem; }
+
+    /* Testimonials */
+    .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+    .testimonial-card { background: #fff; border-radius: 8px; padding: 2rem; box-shadow: 0 4px 8px rgba(0,0,0,0.05); text-align: center; }
+    .testimonial-card p { font-style: italic; margin-bottom: 1rem; }
+    .testimonial-card h4 { color: var(--primary); margin: 0; }
+
+    footer { background: #fff; padding: 2rem 1rem; text-align: center; font-size: 0.9rem; color: var(--text); border-top: 1px solid #e2e8f0; }
+  </style>
+</head>
+<body>
+  <header class="sleek-header">
+  <div class="header-left">
+    <img src="logo.png" alt="Cocooned Logo" class="logo">
+    <span class="brand-name">Cocooned</span>
+    <span class="brand-tagline">Wrapped in Care, Ready to Flutter</span>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#free-tier">Free Tier</a></li>
+      <li><a href="#premium">Premium</a></li>
+      <li><a href="#toolkits">Toolkits</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h2>Make Memories & Grow Together</h2>
+      <p>Join thousands of joyful families using Cocooned to nurture, learn, and flourish.</p>
+      <a href="#free-tier" class="btn">Discover More</a>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section id="events">
+    <h2>Upcoming Events</h2>
+    <div class="events">
+      <div class="event-card">
+        <img src="digital parenting.jpeg" alt="Digital Safety Workshop">
+        <div class="card-content"><h3>Digital Safety Workshop</h3><p>Learn how to keep your kids safe online.</p></div>
+      </div>
+      <div class="event-card">
+        <img src="gentle parenting.jpg" alt="Gentle Parenting Seminar">
+        <div class="card-content"><h3>Gentle Parenting Seminar</h3><p>Positive discipline strategies for primary kids.</p></div>
+      </div>
+      <div class="event-card">
+        <img src="healthy eating.jpg" alt="Healthy Habits Challenge Kickoff">
+        <div class="card-content"><h3>Healthy Habits Challenge</h3><p>30-day health boost for families.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free Tier -->
+  <section id="free-tier"><h2>Free Tier Features</h2><div class="features"><div class="feature-card"><h3>Daily Parenting Tips</h3><p>Guidance aligned with MOE & HPB, delivered to your inbox.</p></div><div class="feature-card"><h3>Development Checklists</h3><p>Age-specific milestones to track your child’s growth.</p></div><div class="feature-card"><h3>Screen-Time Tracker</h3><p>Monitor and manage digital device usage effectively.</p></div><div class="feature-card"><h3>Community Forums</h3><p>Connect with parents by age group & topic.</p></div><div class="feature-card"><h3>Event Calendar</h3><p>Stay updated on free workshops & meetups.</p></div></div></section>
+
+  <!-- Premium -->
+  <section id="premium"><h2>Premium Subscription</h2><div class="subscription"><div class="sub-card"><h3>S$6.90/month or S$69/year</h3><ul><li>Customizable family agreements</li><li>Expert-led webinars & workshops</li><li>Personalized AI learning coach</li><li>Emotion coaching toolkits</li><li>Family wellness challenges</li><li>1:1 coaching sessions</li></ul><a href="#contact" class="btn">Get Started</a></div></div></section>
+
+  <!-- Toolkits -->
+  <section id="toolkits">
+    <h2>Standalone Toolkits</h2>
+    <div class="toolkit-cards">
+      <div class="toolkit-card">
+        <img src="shield.png" alt="Digital-Ready Family icon" class="icon">
+        <h3>Digital-Ready Family</h3>
+        <ul><li>Cyber wellness guide</li><li>Screen contract templates</li><li>Parental control tutorials</li></ul>
+      </div>
+      <div class="toolkit-card">
+        <img src="family.png" alt="Gentle Discipline icon" class="icon">
+        <h3>Gentle Discipline</h3>
+        <ul><li>Positive discipline mini-course</li><li>Behavior charts & scripts</li><li>Roleplay scenarios</li></ul>
+      </div>
+      <div class="toolkit-card">
+        <img src="growth.png" alt="Academic Growth icon" class="icon">
+        <h3>Academic Growth</h3>
+        <ul><li>Study strategy cards</li><li>Routine planner</li><li>MOE & CDC resources</li></ul>
+      </div>
+      <div class="toolkit-card">
+        <img src="motivation.png" alt="Raising Resilient Kids icon" class="icon">
+        <h3>Raising Resilient Kids</h3>
+        <ul><li>SEL games & coping cards</li><li>Journaling templates</li><li>Anxiety resources</li></ul>
+      </div>
+      <div class="toolkit-card">
+        <img src="healthy-food.png" alt="Healthy Habits Challenge icon" class="icon">
+        <h3>Healthy Habits Challenge</h3>
+        <ul><li>30-day wellness plan</li><li>Local meal planners</li><li>HDB-friendly fitness games</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials"><h2>What Parents Say</h2><div class="testimonials"><div class="testimonial-card"><p>"Since using Cocooned, our family communication has never been better!"</p><h4>- Sarah, Mum of Two</h4></div><div class="testimonial-card"><p>"The toolkits are a game-changer. My kids love the challenges and we've learned so much together."</p><h4>- David, Dad of Three</h4></div><div class="testimonial-card"><p>"Cocooned’s prompts and planners keep us on track — and happier as a family!"</p><h4>- Priya, Parent & Helper</h4></div></div></section>
+
+  <!-- Contact -->
+  <section id="contact"><h2>Get in Touch</h2><p>Ready to wrap your family in care? Email us at <a href="mailto:hello@cocooned.sg">hello@cocooned.sg</a></p><a href="mailto:hello@cocooned.sg" class="btn">Contact Us</a></section>
+
+  <footer><p>&copy; 2025 Cocooned. All rights reserved.</p></footer>
+</body>
+</html>
